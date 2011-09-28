@@ -20,10 +20,7 @@
 		EEF55DDB1428F4DC00C4D9A8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEF55DD91428F4DC00C4D9A8 /* InfoPlist.strings */; };
 		EEF55DDE1428F4DC00C4D9A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF55DDD1428F4DC00C4D9A8 /* main.m */; };
 		EEF55DE11428F4DC00C4D9A8 /* AUIAnimatedTextAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF55DE01428F4DC00C4D9A8 /* AUIAnimatedTextAppDelegate.m */; };
-		EEF55DE51428F4DC00C4D9A8 /* AUIAnimatedTextAppDelegate_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF55DE41428F4DC00C4D9A8 /* AUIAnimatedTextAppDelegate_iPhone.m */; };
-		EEF55DE81428F4DC00C4D9A8 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEF55DE61428F4DC00C4D9A8 /* MainWindow_iPhone.xib */; };
-		EEF55DEC1428F4DC00C4D9A8 /* AUIAnimatedTextAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF55DEB1428F4DC00C4D9A8 /* AUIAnimatedTextAppDelegate_iPad.m */; };
-		EEF55DEF1428F4DC00C4D9A8 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEF55DED1428F4DC00C4D9A8 /* MainWindow_iPad.xib */; };
+		EEF55DE81428F4DC00C4D9A8 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEF55DE61428F4DC00C4D9A8 /* MainWindow.xib */; };
 		EEF55DF61428F4DC00C4D9A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF55DD01428F4DC00C4D9A8 /* UIKit.framework */; };
 		EEF55DF71428F4DC00C4D9A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF55DD21428F4DC00C4D9A8 /* Foundation.framework */; };
 		EEF55DF81428F4DC00C4D9A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF55DD41428F4DC00C4D9A8 /* CoreGraphics.framework */; };
@@ -64,12 +61,7 @@
 		EEF55DDD1428F4DC00C4D9A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EEF55DDF1428F4DC00C4D9A8 /* AUIAnimatedTextAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AUIAnimatedTextAppDelegate.h; sourceTree = "<group>"; };
 		EEF55DE01428F4DC00C4D9A8 /* AUIAnimatedTextAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AUIAnimatedTextAppDelegate.m; sourceTree = "<group>"; };
-		EEF55DE31428F4DC00C4D9A8 /* AUIAnimatedTextAppDelegate_iPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AUIAnimatedTextAppDelegate_iPhone.h; path = iPhone/AUIAnimatedTextAppDelegate_iPhone.h; sourceTree = "<group>"; };
-		EEF55DE41428F4DC00C4D9A8 /* AUIAnimatedTextAppDelegate_iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AUIAnimatedTextAppDelegate_iPhone.m; path = iPhone/AUIAnimatedTextAppDelegate_iPhone.m; sourceTree = "<group>"; };
-		EEF55DE71428F4DC00C4D9A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
-		EEF55DEA1428F4DC00C4D9A8 /* AUIAnimatedTextAppDelegate_iPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AUIAnimatedTextAppDelegate_iPad.h; path = iPad/AUIAnimatedTextAppDelegate_iPad.h; sourceTree = "<group>"; };
-		EEF55DEB1428F4DC00C4D9A8 /* AUIAnimatedTextAppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AUIAnimatedTextAppDelegate_iPad.m; path = iPad/AUIAnimatedTextAppDelegate_iPad.m; sourceTree = "<group>"; };
-		EEF55DEE1428F4DC00C4D9A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+		EEF55DE71428F4DC00C4D9A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		EEF55DF51428F4DC00C4D9A8 /* AUIAnimatedTextTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AUIAnimatedTextTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF55DFD1428F4DC00C4D9A8 /* AUIAnimatedTextTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AUIAnimatedTextTests-Info.plist"; sourceTree = "<group>"; };
 		EEF55DFF1428F4DC00C4D9A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -120,13 +112,12 @@
 		EEA252E9142A109A00279A5E /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				EEF55DE61428F4DC00C4D9A8 /* MainWindow.xib */,
+				EEA252E2142A103600279A5E /* RootViewController.h */,
+				EEA252E3142A103600279A5E /* RootViewController.m */,
+				EEA252E4142A103600279A5E /* RootViewController.xib */,
 				EEF55DDF1428F4DC00C4D9A8 /* AUIAnimatedTextAppDelegate.h */,
 				EEF55DE01428F4DC00C4D9A8 /* AUIAnimatedTextAppDelegate.m */,
-				EEF55DE21428F4DC00C4D9A8 /* iPhone */,
-				EEF55DE91428F4DC00C4D9A8 /* iPad */,
-				EEF55DEA1428F4DC00C4D9A8 /* AUIAnimatedTextAppDelegate_iPad.h */,
-				EEF55DEB1428F4DC00C4D9A8 /* AUIAnimatedTextAppDelegate_iPad.m */,
-				EEF55DED1428F4DC00C4D9A8 /* MainWindow_iPad.xib */,
 			);
 			name = Example;
 			sourceTree = "<group>";
@@ -183,26 +174,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EEF55DE21428F4DC00C4D9A8 /* iPhone */ = {
-			isa = PBXGroup;
-			children = (
-				EEF55DE31428F4DC00C4D9A8 /* AUIAnimatedTextAppDelegate_iPhone.h */,
-				EEF55DE41428F4DC00C4D9A8 /* AUIAnimatedTextAppDelegate_iPhone.m */,
-				EEF55DE61428F4DC00C4D9A8 /* MainWindow_iPhone.xib */,
-				EEA252E2142A103600279A5E /* RootViewController.h */,
-				EEA252E3142A103600279A5E /* RootViewController.m */,
-				EEA252E4142A103600279A5E /* RootViewController.xib */,
-			);
-			name = iPhone;
-			sourceTree = "<group>";
-		};
-		EEF55DE91428F4DC00C4D9A8 /* iPad */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = iPad;
-			sourceTree = "<group>";
-		};
 		EEF55DFB1428F4DC00C4D9A8 /* AUIAnimatedTextTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +204,7 @@
 				EEF55DC81428F4DC00C4D9A8 /* Sources */,
 				EEF55DC91428F4DC00C4D9A8 /* Frameworks */,
 				EEF55DCA1428F4DC00C4D9A8 /* Resources */,
+				EE3FFFC7143320BD008E6278 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -294,8 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEF55DDB1428F4DC00C4D9A8 /* InfoPlist.strings in Resources */,
-				EEF55DE81428F4DC00C4D9A8 /* MainWindow_iPhone.xib in Resources */,
-				EEF55DEF1428F4DC00C4D9A8 /* MainWindow_iPad.xib in Resources */,
+				EEF55DE81428F4DC00C4D9A8 /* MainWindow.xib in Resources */,
 				EEA252E6142A103600279A5E /* RootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +283,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		EE3FFFC7143320BD008E6278 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Release\" ]; then\n# Auto Increment build\nbuildPlist=${INFOPLIST_FILE}\nCFBuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBuildNumber\" $buildPlist)\nCFBuildNumber=$(($CFBuildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBuildNumber $CFBuildNumber\" $buildPlist\nCFBuildDate=$(date)\n/usr/libexec/PlistBuddy -c \"Set :CFBuildDate $CFBuildDate\" $buildPlist\n\n# Adjust version\n\nCFBundleMajor=$(/usr/libexec/PlistBuddy -c \"Print CFBundleMajorVersion\" $buildPlist)\nCFBundleMinor=$(/usr/libexec/PlistBuddy -c \"Print CFBundleMinorVersion\" $buildPlist)\n\nCFBundleVersion=\"$CFBundleMajor.$CFBundleMinor.$CFBuildNumber\"\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $CFBundleVersion\" $buildPlist\n\nfi\n";
+		};
 		EEF55DF31428F4DC00C4D9A8 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -334,8 +318,6 @@
 			files = (
 				EEF55DDE1428F4DC00C4D9A8 /* main.m in Sources */,
 				EEF55DE11428F4DC00C4D9A8 /* AUIAnimatedTextAppDelegate.m in Sources */,
-				EEF55DE51428F4DC00C4D9A8 /* AUIAnimatedTextAppDelegate_iPhone.m in Sources */,
-				EEF55DEC1428F4DC00C4D9A8 /* AUIAnimatedTextAppDelegate_iPad.m in Sources */,
 				EEA252E5142A103600279A5E /* RootViewController.m in Sources */,
 				EEA252EE142A10C500279A5E /* AUIAnimatableLabel.m in Sources */,
 				EEA252EF142A10C500279A5E /* AnimatableTextField.m in Sources */,
@@ -370,20 +352,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		EEF55DE61428F4DC00C4D9A8 /* MainWindow_iPhone.xib */ = {
+		EEF55DE61428F4DC00C4D9A8 /* MainWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EEF55DE71428F4DC00C4D9A8 /* en */,
 			);
-			name = MainWindow_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		EEF55DED1428F4DC00C4D9A8 /* MainWindow_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EEF55DEE1428F4DC00C4D9A8 /* en */,
-			);
-			name = MainWindow_iPad.xib;
+			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
 		EEF55DFE1428F4DC00C4D9A8 /* InfoPlist.strings */ = {
@@ -441,6 +415,7 @@
 				GCC_PREFIX_HEADER = "AUIAnimatedText/AUIAnimatedText-Prefix.pch";
 				INFOPLIST_FILE = "AUIAnimatedText/AUIAnimatedText-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -454,6 +429,7 @@
 				GCC_PREFIX_HEADER = "AUIAnimatedText/AUIAnimatedText-Prefix.pch";
 				INFOPLIST_FILE = "AUIAnimatedText/AUIAnimatedText-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

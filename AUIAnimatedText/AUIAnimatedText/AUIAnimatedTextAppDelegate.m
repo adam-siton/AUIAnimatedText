@@ -7,6 +7,7 @@
 //
 
 #import "AUIAnimatedTextAppDelegate.h"
+#import "RootViewController.h"
 
 @implementation AUIAnimatedTextAppDelegate
 
@@ -15,7 +16,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    RootViewController *rootController = [[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil];
+    self.window.rootViewController = rootController;
+    [rootController release];
     [self.window makeKeyAndVisible];
     return YES;
 }
