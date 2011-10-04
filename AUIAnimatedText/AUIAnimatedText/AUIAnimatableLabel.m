@@ -22,7 +22,7 @@
 
 @implementation AUIAnimatableLabel
 
-@synthesize textLayer;
+@synthesize textLayer, verticalTextAlignment;
 
 -(id) init
 {
@@ -186,22 +186,16 @@
     [self setNeedsDisplay];
 }
 
+-(void) setVerticalTextAlignment:(AUITextVerticalAlignment)newVerticalTextAlignment
+{
+    verticalTextAlignment = newVerticalTextAlignment;
+    [self setNeedsLayout];
+}
+
 -(void) layoutSubviews
 {
     [super layoutSubviews];
-    
-    // Resize the text so that the text will be vertically aligned to the center
-    // TODO: Add vertical alignment property
-    CGSize maximumSize = CGSizeMake(self.frame.size.width, self.frame.size.height);
-    CGSize stringSize = [self.text sizeWithFont:self.font 
-                              constrainedToSize:maximumSize 
-                                  lineBreakMode:self.lineBreakMode];
-    
-    CGRect newLayerFrame = self.layer.bounds;
-    newLayerFrame.size.height = stringSize.height;
-    newLayerFrame.origin.y = (self.bounds.size.height - stringSize.height) / 2;
-    textLayer.frame = newLayerFrame;
-    
+        
     if (self.adjustsFontSizeToFitWidth)
     {
         // Calculate the new font size:
@@ -210,6 +204,30 @@
         self.font = [UIFont fontWithName:self.font.fontName size:newFontSize];
     }
     
+    // Resize the text so that the text will be vertically aligned according to the set alignment
+    CGSize maximumSize = CGSizeMake(self.frame.size.width, self.frame.size.height);
+    CGSize stringSize = [self.text sizeWithFont:self.font 
+                              constrainedToSize:maximumSize 
+                                  lineBreakMode:self.lineBreakMode];
+    
+    CGRect newLayerFrame = self.layer.bounds;
+    newLayerFrame.size.height = stringSize.height;
+    switch (self.verticalTextAlignment) {
+        case AUITextVerticalAlignmentCenter:
+                newLayerFrame.origin.y = (self.bounds.size.height - stringSize.height) / 2;        
+            break;
+        case AUITextVerticalAlignmentTop:
+            newLayerFrame.origin.y = 0;
+            break;
+        case AUITextVerticalAlignmentBottom:
+            newLayerFrame.origin.y = (self.bounds.size.height - stringSize.height);
+            break;
+        default:
+            break;
+    }
+    
+    textLayer.frame = newLayerFrame;
+
     // TODO: Handle numberOfLines
     
     [self setNeedsDisplay];
@@ -231,9 +249,9 @@
     self.text = [super text];
     self.textAlignment = [super textAlignment];
     self.lineBreakMode = [super lineBreakMode];
-    
+    // TODO: Get the value from the contentMode property so that the vertical alignment could be set via interface builder
+    self.verticalTextAlignment = AUITextVerticalAlignmentCenter;
     [super setText:nil];
-    
     [self.layer addSublayer:textLayer];
 }
 

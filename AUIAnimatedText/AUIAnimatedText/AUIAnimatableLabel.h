@@ -10,11 +10,19 @@
 
 @class CATextLayer;
 
+typedef enum {
+    AUITextVerticalAlignmentCenter = 0,
+    AUITextVerticalAlignmentTop = 1,
+    AUITextVerticalAlignmentBottom = 2
+} AUITextVerticalAlignment;
+
 @interface AUIAnimatableLabel : UILabel
 {
     CATextLayer *textLayer;
 }
 
+@property (nonatomic) AUITextVerticalAlignment verticalTextAlignment;
 @property (readonly) CATextLayer *textLayer;
+
 
 @end
