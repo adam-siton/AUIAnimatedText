@@ -204,29 +204,16 @@
     
     if (self.adjustsFontSizeToFitWidth)
     {
-        // TODO: Calculate the size of the textLayer
-        // minimumFontSize
+        // Calculate the new font size:
+        CGFloat newFontSize;
+        [textLayer.string sizeWithFont:self.font minFontSize:self.minimumFontSize actualFontSize:&newFontSize forWidth:self.bounds.size.width lineBreakMode:self.lineBreakMode];
+        self.font = [UIFont fontWithName:self.font.fontName size:newFontSize];
     }
     
-    // TODO: Handle numberOfLines and  minimumFontSize and baselineAdjustment
+    // TODO: Handle numberOfLines
     
     [self setNeedsDisplay];
 }
-
-/*
-// this determines the number of lines to draw and what to do when sizeToFit is called. default value is 1 (single line). A value of 0 means no limit
-// if the height of the text reaches the # of lines or the height of the view is less than the # of lines allowed, the text will be
-// truncated using the line break mode.
-
-@property(nonatomic) NSInteger numberOfLines;
-
-// these next 3 property allow the label to be autosized to fit a certain width by shrinking the font size to a minimum font size
-// and to specify how the text baseline moves when it needs to shrink the font. this only affects single line text (lineCount == 1)
-
-@property(nonatomic) CGFloat minimumFontSize;                 // default is 0.0
-@property(nonatomic) UIBaselineAdjustment baselineAdjustment; // default is UIBaselineAdjustmentAlignBaselines
-
-*/
 
 #pragma mark - private methods
 
@@ -243,6 +230,7 @@
     self.backgroundColor = [super backgroundColor];
     self.text = [super text];
     self.textAlignment = [super textAlignment];
+    self.lineBreakMode = [super lineBreakMode];
     
     [super setText:nil];
     

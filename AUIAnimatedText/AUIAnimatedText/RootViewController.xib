@@ -45,8 +45,8 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<object class="IBUIButton" id="423178519">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{71, 220}, {173, 37}}</string>
+						<int key="NSvFlags">293</int>
+						<string key="NSFrame">{{71, 98}, {173, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="594785086"/>
@@ -76,8 +76,8 @@
 					</object>
 					<object class="IBUIButton" id="594785086">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{71, 273}, {173, 37}}</string>
+						<int key="NSvFlags">293</int>
+						<string key="NSFrame">{{71, 151}, {173, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="558469391"/>
@@ -97,8 +97,8 @@
 					</object>
 					<object class="IBUIButton" id="558469391">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{71, 328}, {173, 37}}</string>
+						<int key="NSvFlags">293</int>
+						<string key="NSFrame">{{71, 206}, {173, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="965793814"/>
@@ -118,8 +118,8 @@
 					</object>
 					<object class="IBUIButton" id="965793814">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{71, 382}, {173, 37}}</string>
+						<int key="NSvFlags">293</int>
+						<string key="NSFrame">{{71, 260}, {173, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -139,11 +139,12 @@
 					</object>
 					<object class="IBUILabel" id="654947281">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{53, 148}, {214, 30}}</string>
+						<int key="NSvFlags">295</int>
+						<string key="NSFrame">{{53, 26}, {214, 56}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="423178519"/>
+						<reference key="IBUIBackgroundColor" ref="419054499"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -162,6 +163,7 @@
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
+						<int key="IBUINumberOfLines">2</int>
 						<int key="IBUITextAlignment">1</int>
 					</object>
 				</object>
