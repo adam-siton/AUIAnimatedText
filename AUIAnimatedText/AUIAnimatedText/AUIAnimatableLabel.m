@@ -205,9 +205,8 @@
     }
     
     // Resize the text so that the text will be vertically aligned according to the set alignment
-    CGSize maximumSize = CGSizeMake(self.frame.size.width, self.frame.size.height);
     CGSize stringSize = [self.text sizeWithFont:self.font 
-                              constrainedToSize:maximumSize 
+                              constrainedToSize:self.bounds.size 
                                   lineBreakMode:self.lineBreakMode];
     
     CGRect newLayerFrame = self.layer.bounds;
@@ -225,7 +224,6 @@
         default:
             break;
     }
-    
     textLayer.frame = newLayerFrame;
 
     // TODO: Handle numberOfLines
