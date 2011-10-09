@@ -1,0 +1,18 @@
+AUIAnimatableText
+============
+AUIAnimatableText is a drop-in UILabel replacement that uses CATextLayer instead of the regular CALayer, and thus making almost all the properties animatable.
+
+### Properties animatable in AUIAnimatableText and not in UILabel
+
+1. textColor
+2. text
+3. font
+3. fontSize 
+
+### Adding AUIAnimatableText to your project
+
+1. Add AUIAnimatableText.h + m to your project
+2. Change the class of your labels from UILabel to AUIAnimatableText in code or in interface builder
+3. That's it.
+
+After doing the above steps you can simply change the label's properties inside a UIView animation block and they will change animated.
