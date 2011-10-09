@@ -3,7 +3,7 @@
 //  AUIAnimatedText
 //
 //  Created by Adam Siton on 9/21/11.
-//  Copyright 2011 Any.do. All rights reserved.
+//  Copyright 2011 Adam Siton. All rights reserved.
 //
 
 #import "RootViewController.h"
