@@ -11,7 +11,7 @@ AUIAnimatableText is a drop-in UILabel replacement that uses CATextLayer instead
 
 ### Adding AUIAnimatableText to your project
 
-1. Add AUIAnimatableText.h + m to your project
+1. Add AUIAnimatableText.h+m and UIFont+CoreTextExtensions.h+m to your project
 2. Change the class of your labels from UILabel to AUIAnimatableText in code or in interface builder
 3. That's it.
 
