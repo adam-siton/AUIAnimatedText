@@ -165,6 +165,7 @@
             break;
         case UITextAlignmentRight:
             textLayer.alignmentMode = kCAAlignmentRight;
+            break;
         case UITextAlignmentCenter:
             textLayer.alignmentMode = kCAAlignmentCenter;
             break;

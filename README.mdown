@@ -16,3 +16,12 @@ AUIAnimatableText is a drop-in UILabel replacement that uses CATextLayer instead
 3. That's it.
 
 After doing the above steps you can simply change the label's properties inside a UIView animation block and they will change animated.
+
+To get the duration to work properly it looks like you need to use:
+
+    [CATransaction begin];
+    [CATransaction setValue:[NSNumber numberWithFloat:0.7f] forKey:kCATransactionAnimationDuration];
+    {...new layout code here...}
+    [CATransaction commit];
+
+(I'm not sure if CATransaction supports block-style animation, this is just what I've found out so far.
