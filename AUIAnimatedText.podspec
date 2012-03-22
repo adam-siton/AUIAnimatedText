@@ -5,10 +5,9 @@ Pod::Spec.new do |s|
   s.homepage     = 'https://github.com/adam-siton/AUIAnimatedText'
   s.author       = { 'Adam Siton'=> 'adamsiton@gmail.com' }
   s.source       = { :git => 'https://github.com/adam-siton/AUIAnimatedText.git' }
-  s.source       = { :git => '/Users/fabio/Documents/GitHub/AUIAnimatedText/' }
   s.description  = 'Properties animatable in AUIAnimatableText and not in UILabel: textColor, text, font, fontSize.'
   s.platform     = :ios
-  s.source_files = 'Classes/*.{h,m}'
+  s.source_files = 'Library/*.{h,m}'
   s.clean_paths  = 'Project'
   s.framework    = 'CoreText', 'QuartzCore', 'CoreGraphics', 'UIKit'
 end
