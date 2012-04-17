@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E53E33D4151BD82900160BF9 /* AUIAnimatableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E33D1151BD82900160BF9 /* AUIAnimatableLabel.m */; };
-		E53E33D5151BD82900160BF9 /* UIFont+CoreTextExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E33D3151BD82900160BF9 /* UIFont+CoreTextExtensions.m */; };
+		EE3287AA153D53E200FCD64E /* AUIAnimatableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3287A7153D53E200FCD64E /* AUIAnimatableLabel.m */; };
+		EE3287AB153D53E200FCD64E /* UIFont+CoreTextExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3287A9153D53E200FCD64E /* UIFont+CoreTextExtensions.m */; };
 		EEA252E5142A103600279A5E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA252E3142A103600279A5E /* RootViewController.m */; };
 		EEA252E6142A103600279A5E /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA252E4142A103600279A5E /* RootViewController.xib */; };
 		EEA252F4142A13A300279A5E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA252F3142A13A300279A5E /* QuartzCore.framework */; };
@@ -39,10 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E53E33D0151BD82900160BF9 /* AUIAnimatableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUIAnimatableLabel.h; path = ../../Classes/AUIAnimatableLabel.h; sourceTree = "<group>"; };
-		E53E33D1151BD82900160BF9 /* AUIAnimatableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AUIAnimatableLabel.m; path = ../../Classes/AUIAnimatableLabel.m; sourceTree = "<group>"; };
-		E53E33D2151BD82900160BF9 /* UIFont+CoreTextExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+CoreTextExtensions.h"; path = "../../Classes/UIFont+CoreTextExtensions.h"; sourceTree = "<group>"; };
-		E53E33D3151BD82900160BF9 /* UIFont+CoreTextExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+CoreTextExtensions.m"; path = "../../Classes/UIFont+CoreTextExtensions.m"; sourceTree = "<group>"; };
+		EE3287A6153D53E200FCD64E /* AUIAnimatableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AUIAnimatableLabel.h; path = ../../Library/AUIAnimatableLabel.h; sourceTree = "<group>"; };
+		EE3287A7153D53E200FCD64E /* AUIAnimatableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AUIAnimatableLabel.m; path = ../../Library/AUIAnimatableLabel.m; sourceTree = "<group>"; };
+		EE3287A8153D53E200FCD64E /* UIFont+CoreTextExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+CoreTextExtensions.h"; path = "../../Library/UIFont+CoreTextExtensions.h"; sourceTree = "<group>"; };
+		EE3287A9153D53E200FCD64E /* UIFont+CoreTextExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+CoreTextExtensions.m"; path = "../../Library/UIFont+CoreTextExtensions.m"; sourceTree = "<group>"; };
 		EEA252E2142A103600279A5E /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		EEA252E3142A103600279A5E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		EEA252E4142A103600279A5E /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
@@ -96,10 +96,10 @@
 		EEA252E8142A108B00279A5E /* AUIAnimatedText */ = {
 			isa = PBXGroup;
 			children = (
-				E53E33D0151BD82900160BF9 /* AUIAnimatableLabel.h */,
-				E53E33D1151BD82900160BF9 /* AUIAnimatableLabel.m */,
-				E53E33D2151BD82900160BF9 /* UIFont+CoreTextExtensions.h */,
-				E53E33D3151BD82900160BF9 /* UIFont+CoreTextExtensions.m */,
+				EE3287A6153D53E200FCD64E /* AUIAnimatableLabel.h */,
+				EE3287A7153D53E200FCD64E /* AUIAnimatableLabel.m */,
+				EE3287A8153D53E200FCD64E /* UIFont+CoreTextExtensions.h */,
+				EE3287A9153D53E200FCD64E /* UIFont+CoreTextExtensions.m */,
 			);
 			name = AUIAnimatedText;
 			sourceTree = "<group>";
@@ -315,8 +315,8 @@
 				EEF55DDE1428F4DC00C4D9A8 /* main.m in Sources */,
 				EEF55DE11428F4DC00C4D9A8 /* AUIAnimatedTextAppDelegate.m in Sources */,
 				EEA252E5142A103600279A5E /* RootViewController.m in Sources */,
-				E53E33D4151BD82900160BF9 /* AUIAnimatableLabel.m in Sources */,
-				E53E33D5151BD82900160BF9 /* UIFont+CoreTextExtensions.m in Sources */,
+				EE3287AA153D53E200FCD64E /* AUIAnimatableLabel.m in Sources */,
+				EE3287AB153D53E200FCD64E /* UIFont+CoreTextExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
