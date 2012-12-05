@@ -18,7 +18,6 @@
 {
     RootViewController *rootController = [[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil];
     self.window.rootViewController = rootController;
-    [rootController release];
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -62,10 +61,5 @@
      */
 }
 
-- (void)dealloc
-{
-    [_window release];
-    [super dealloc];
-}
 
 @end

@@ -72,12 +72,6 @@
     return self;
 }
 
--(void) dealloc
-{
-    [textLayer release];
-    [super dealloc];
-}
-
 -(UIColor *)textColor
 {
     return [UIColor colorWithCGColor:textLayer.foregroundColor];
@@ -143,30 +137,30 @@
     [self setNeedsDisplay];
 }
 
--(UITextAlignment) textAlignment
+-(NSTextAlignment) textAlignment
 {
-    UITextAlignment labelAlignment = UITextAlignmentLeft;
+    NSTextAlignment labelAlignment = NSTextAlignmentLeft;
     NSString *layerAlignmentMode = textLayer.alignmentMode;
     if ([layerAlignmentMode isEqualToString:kCAAlignmentLeft])
-        labelAlignment = UITextAlignmentLeft;
+        labelAlignment = NSTextAlignmentLeft;
     else if ([layerAlignmentMode isEqualToString:kCAAlignmentRight])
-        labelAlignment = UITextAlignmentRight;
+        labelAlignment = NSTextAlignmentRight;
     else if ([layerAlignmentMode isEqualToString:kCAAlignmentCenter])
-        labelAlignment = UITextAlignmentCenter;
+        labelAlignment = NSTextAlignmentCenter;
     
     return labelAlignment;
 }
 
--(void) setTextAlignment:(UITextAlignment)textAlignment
+-(void) setTextAlignment:(NSTextAlignment)textAlignment
 {
     switch (textAlignment) {
-        case UITextAlignmentLeft:
+        case NSTextAlignmentLeft:
             textLayer.alignmentMode = kCAAlignmentLeft;
             break;
-        case UITextAlignmentRight:
+        case NSTextAlignmentRight:
             textLayer.alignmentMode = kCAAlignmentRight;
             break;
-        case UITextAlignmentCenter:
+        case NSTextAlignmentCenter:
             textLayer.alignmentMode = kCAAlignmentCenter;
             break;
         default:
@@ -176,27 +170,27 @@
     [self setNeedsDisplay];
 }
 
--(UILineBreakMode) lineBreakMode
+-(NSLineBreakMode) lineBreakMode
 {
     return [super lineBreakMode];
 }
 
--(void) setLineBreakMode:(UILineBreakMode)lineBreakMode
+-(void) setLineBreakMode:(NSLineBreakMode)lineBreakMode
 {
     switch (lineBreakMode) {
-        case UILineBreakModeWordWrap:
+        case NSLineBreakByWordWrapping:
             textLayer.wrapped = YES;
             break;
-        case UILineBreakModeClip:
+        case NSLineBreakByClipping:
             textLayer.wrapped = NO;
             break;
-        case UILineBreakModeHeadTruncation:
-            textLayer.truncationMode = kCATruncationStart;  
+        case NSLineBreakByTruncatingHead:
+            textLayer.truncationMode = kCATruncationStart;
             break;
-        case UILineBreakModeTailTruncation:
+        case NSLineBreakByTruncatingTail:
             textLayer.truncationMode = kCATruncationEnd;
             break;
-        case UILineBreakModeMiddleTruncation:
+        case NSLineBreakByTruncatingMiddle:
             textLayer.truncationMode = kCATruncationMiddle;
             break;
         default:
@@ -214,25 +208,32 @@
 -(void) layoutSubviews
 {
     [super layoutSubviews];
-        
+    
     if (self.adjustsFontSizeToFitWidth)
     {
         // Calculate the new font size:
         CGFloat newFontSize;
-        [textLayer.string sizeWithFont:self.font minFontSize:self.minimumFontSize actualFontSize:&newFontSize forWidth:self.bounds.size.width lineBreakMode:self.lineBreakMode];
+        float minimumFontSize;
+        if ([self respondsToSelector:@selector(minimumScaleFactor)]) {
+            minimumFontSize = self.minimumScaleFactor;
+        }
+        else {
+            minimumFontSize = self.minimumFontSize;
+        }
+        [textLayer.string sizeWithFont:self.font minFontSize:minimumFontSize actualFontSize:&newFontSize forWidth:self.bounds.size.width lineBreakMode:self.lineBreakMode];
         self.font = [UIFont fontWithName:self.font.fontName size:newFontSize];
     }
     
     // Resize the text so that the text will be vertically aligned according to the set alignment
-    CGSize stringSize = [self.text sizeWithFont:self.font 
-                              constrainedToSize:self.bounds.size 
+    CGSize stringSize = [self.text sizeWithFont:self.font
+                              constrainedToSize:self.bounds.size
                                   lineBreakMode:self.lineBreakMode];
     
     CGRect newLayerFrame = self.layer.bounds;
     newLayerFrame.size.height = stringSize.height;
     switch (self.verticalTextAlignment) {
         case AUITextVerticalAlignmentCenter:
-                newLayerFrame.origin.y = (self.bounds.size.height - stringSize.height) / 2;        
+            newLayerFrame.origin.y = (self.bounds.size.height - stringSize.height) / 2;
             break;
         case AUITextVerticalAlignmentTop:
             newLayerFrame.origin.y = 0;
@@ -244,7 +245,7 @@
             break;
     }
     textLayer.frame = newLayerFrame;
-
+    
     // TODO: Handle numberOfLines
     
     [self setNeedsDisplay];
@@ -253,7 +254,7 @@
 #pragma mark - private methods
 
 -(void) _initializeTextLayer
-{    
+{
     textLayer = [[CATextLayer alloc] init];
     [textLayer setFrame:self.bounds];
     textLayer.contentsScale = [[UIScreen mainScreen] scale];

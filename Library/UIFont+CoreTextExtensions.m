@@ -10,15 +10,13 @@
 
 @implementation UIFont (CoreTextExtensions)
 
-- (CTFontRef)CTFont
-{
-    CTFontRef font = CTFontCreateWithName((CFStringRef)self.fontName, self.pointSize, NULL);
+- (CTFontRef)CTFont {
+    CTFontRef font = CTFontCreateWithName((__bridge CFStringRef)self.fontName, self.pointSize, NULL);
     return font;
 }
 
-+ (UIFont *) fontWithCTFont:(CTFontRef) CTFont
-{
-    NSString *fontName = [(NSString *)CTFontCopyName(CTFont, kCTFontPostScriptNameKey) autorelease];
++ (UIFont *) fontWithCTFont:(CTFontRef) CTFont {
+    NSString *fontName = (NSString *)CFBridgingRelease(CTFontCopyName(CTFont, kCTFontPostScriptNameKey));
     CGFloat fontSize = CTFontGetSize(CTFont);
     return [UIFont fontWithName:fontName size:fontSize];
 }
@@ -34,7 +32,7 @@
     CFRelease(theCGFont);
     CFRelease(dataProvider);
     CFRelease(url);
-    return result;    
+    return result;
 }
 
 @end

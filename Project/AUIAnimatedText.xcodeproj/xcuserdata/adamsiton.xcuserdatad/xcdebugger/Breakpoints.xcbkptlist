@@ -9,11 +9,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "AUIAnimatedText/RootViewController.m"
-         timestampString = "339437838.949787"
+         timestampString = "376398580.303181"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "88"
-         endingLineNumber = "88"
+         startingLineNumber = "82"
+         endingLineNumber = "82"
          landmarkName = "-animateTextColor"
          landmarkType = "5">
       </FileBreakpoint>
@@ -23,11 +23,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "AUIAnimatedText/RootViewController.m"
-         timestampString = "339437838.949787"
+         timestampString = "376398580.303181"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "101"
-         endingLineNumber = "101"
+         startingLineNumber = "95"
+         endingLineNumber = "95"
          landmarkName = "-animateText"
          landmarkType = "5">
       </FileBreakpoint>

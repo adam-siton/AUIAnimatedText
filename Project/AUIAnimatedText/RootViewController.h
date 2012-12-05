@@ -17,6 +17,6 @@
     
     AUIAnimatableLabel *animatableLabel;
 }
-@property (nonatomic, retain) IBOutlet AUIAnimatableLabel *animatableLabel;
+@property (nonatomic, strong) IBOutlet AUIAnimatableLabel *animatableLabel;
 
 @end

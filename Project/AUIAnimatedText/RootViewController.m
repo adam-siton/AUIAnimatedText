@@ -45,12 +45,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [colorToAnimate release];
-    [animatableLabel release];
-    [super dealloc];
-}
 
 - (void)didReceiveMemoryWarning
 {
